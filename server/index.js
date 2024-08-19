@@ -8,15 +8,11 @@ import dotenv from 'dotenv'
 dotenv.config();
 const app =  express();
 
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 3000;
 
 Connection();
 
-app.use(cors({
-    origin: 'https://todowebapp-psi.vercel.app', 
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    credentials: true,
-}));
+app.use(cors());
 
 app.use(bodyParser.json({ extended : true}));
 app.use(bodyParser.urlencoded({ extended : true}));
