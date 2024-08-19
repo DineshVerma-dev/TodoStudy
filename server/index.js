@@ -6,7 +6,7 @@ import bodyParser from 'body-parser';
 
 const app =  express();
 
-const PORT = process.env.PORT || 8000;
+const port = process.env.PORT || 8000;
 
 Connection();
 
@@ -27,8 +27,8 @@ app.get("/todo", (req, res) => {
     res.send("do application");
 });
 
-app.listen(PORT,()=>{
-    console.log(`your server is running on ${PORT}`);
+app.listen(port,()=>{
+    console.log(`your server is running on ${port}`);
 });
 
 
