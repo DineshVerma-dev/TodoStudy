@@ -10,7 +10,12 @@ const port = process.env.PORT || 8000;
 
 Connection();
 
-app.use(cors());
+app.use(cors({
+    origin: 'https://todowebapp-psi.vercel.app', 
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true,
+}));
+
 app.use(bodyParser.json({ extended : true}));
 app.use(bodyParser.urlencoded({ extended : true}));
 
