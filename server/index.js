@@ -34,7 +34,7 @@ app.get("/todo", (req, res) => {
     res.send("do application");
 });
 
-app.listen(port,()=>{
+app.listen(process.env.PORT,()=>{
     console.log(`your server is running on ${port}`);
 });
 
